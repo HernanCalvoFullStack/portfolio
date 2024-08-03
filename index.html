@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/color-1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Estilos Switcher -->
+    <link rel="stylesheet" href="css/color-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="css/color-2.css" class="alternate-style" title="color-2" disabled>
+    <link rel="stylesheet" href="css/color-3.css" class="alternate-style" title="color-3" disabled>
+    <link rel="stylesheet" href="css/color-4.css" class="alternate-style" title="color-4" disabled>
+    <link rel="stylesheet" href="css/color-5.css" class="alternate-style" title="color-5" disabled>
+    <link rel="stylesheet" href="css/style-switcher.css">
+</head>
+<body>
+    <!-- Contenedor Principal -->
+    <div class="main-container">
+
+        <!-- Aside -->
+        <div class="aside">
+            <div class="logo">
+                <a href=""><span>H</span>ernan</a>
+            </div>
+
+            <div class="nav-toggler">
+                <span></span>
+            </div>
+
+            <ul class="nav">
+                <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
+                <!-- <li><a href="#services"><i class="fa fa-list"></i>Services</a></li> -->
+                <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
+                <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
+            </ul>
+        </div>
+        <!-- Fin Aside -->
+
+        <!-- Contenido -->
+        <div class="main-content">
+
+            <!-- Sección Principal -->
+            <section id="home" class="home section">
+                <div class="container">
+                    <div class="row">
+                        <div class="home-info padd-15">
+                            <h3 class="hello">Hello, my name is <span class="name">Hernán Calvo</span></h3>
+                            <h3 class="my-profession">I'm a <span class="typing">Web Developer Full Stack</span></h3>
+                            <p class="justify">I'm a Full Stack Web Developer, specialized in the MERN and PERN Stack. I'm self-taught at heart, and at the same time I'm studying a Bachelor's Degree in Data Science at the University of the 21st Century.
+                                My next steps are to specialize in Python, Django and PostgreeSQL.
+                                I am looking for a first job opportunity in the world of Programming.</p>
+                            <a href="#contact" class="btn hire-me">Hire Me</a>
+                        </div>
+
+                        <div class="home-img padd-15">
+                            <img src="images/hero.jpg" alt="Image Hero">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Fin Sección Principal -->
+
+            <!-- Sección About -->
+            <section id="about" class="about section">
+                <div class="cantainer">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>About Me</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="about-content padd-15">
+                            <div class="row">
+                                <div class="about-text padd-15">
+                                    <h3>I'm Hernán Calvo and <span>Web Developer Full Stack</span></h3>
+                                    <p>I'm the father of a 10-year-old girl, an athlete, I play Soccer and Paddle, I study at the University, at the same time I only have five finals to qualify as a Mathematics Professor at the Institute of Professor Joaquín V. González.
+                                        I love programming, I discovered it by making a Microsoft Excel program for sports betting (non-profit) for the World Cups and the American and European Cups. From that moment on I started studying courses on the Udemy Platform in HTML, CSS (SaSS and TailwindCSS), JavaScript, React JS, Node JS, PHP, MySQL and React Native.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="personal-info padd-15">
+                                    <div class="row">
+                                        <div class="info-item padd-15">
+                                            <p>Birthday: <span>7/8/1984</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Age: <span>39</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>LinkedIn: <span><a class="enlace" href="https://www.linkedin.com/in/hernan-calvo-937a64199/" target="_blank">Hernán Calvo</a></span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Git-Hub: <span><a class="enlace" href="https://github.com/HernanCalvoFullStack" target="_blank">HernanCalvoFullStack</a></span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Email: <span>hernancalvofullstack@gmail.com</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Phone: <span>116-212-7899</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>City: <span>Buenos Aires - Olivos</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Freelance: <span>Available</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="buttons padd-15">
+                                            <a href="./archivos/Curriculum Vitae - Hernan Calvo.pdf" download="CV Hernan Calvo" class="btn">Download CV</a>
+                                            <a href="#contact" class="btn hire-me">Hire Me</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skills padd-15">
+                                    <div class="row">
+                                        <div class="skill-item padd-15">
+                                            <h5>HTML & CSS</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 80%;"></div>
+                                                <div class="skill-percent">80%</div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>JavaScript</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 80%;"></div>
+                                                <div class="skill-percent">80%</div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>React JS</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 70%;"></div>
+                                                <div class="skill-percent">70%</div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>Node Js</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 70%;"></div>
+                                                <div class="skill-percent">70%</div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item padd-15">
+                                            <h5>TypeScript</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 60%;"></div>
+                                                <div class="skill-percent">60%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="education padd-15">
+                                    <h3 class="title">Education</h3>
+                                    <div class="row">
+                                        <div class="timeline-box padd-15">
+                                            <div class="timeline shadow-dark">
+                                                <!-- timeline item -->
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2023 - Actualmente
+                                                    </h3>
+                                                    <a href="https://21.edu.ar/oferta-academica/licenciatura-en-ciencia-de-datos" target="_blank"><h4 class="timeline-title">Lic. en Ciencia de Datos</h4></a>
+                                                    <p class="timeline-text">Carrera dictada por la Universidad del Siglo 21 - Modalidad a Distancia - 18 materias aprobadas en 1,5 años</p>
+                                                </div>
+                                                <!-- timeline item -->
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2020 - 2021
+                                                    </h3>
+                                                    <a href="https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/" target="_blank"><h4 class="timeline-title">CSS La Guía Completa - Flexbox, CSS Grid, SASS +20 proyectos</h4></a>
+                                                    <p class="timeline-text">Flexbox, CSS Grid, Custom Properties, SASS, Mixins, Gulp Workflows, Animaciones, RWD, Animaciones, Transiciones y Transformaciones
+                                                    </p>
+                                                </div>
+                                                <!-- timeline item -->
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2021 - 2022
+                                                    </h3>
+                                                    <a href="https://www.udemy.com/course/javascript-moderno-guia-definitiva-construye-10-proyectos/" target="_blank"><h4 class="timeline-title">JavaScript Moderno Guía Definitiva Construye +20 Proyectos</h4></a>
+                                                    <p class="timeline-text">REST APIS con JSON y Fetch API + Async / Await, Template Literals, arrow functions, generadores, iteradores, promises, async / await, fetch api, programación orientada a objetos con Classes (ES6) y Prototypes (ES5), programación Asincrona con Promises, Callbacks y Async Await + Proyecto MERN Full Stack</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="experience padd-15">
+                                    <h3 class="title">Experience</h3>
+                                    <div class="row">
+                                        <div class="timeline-box padd-15">
+                                            <div class="timeline shadow-dark">
+                                                <!-- timeline item -->
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2021 - 2022
+                                                    </h3>
+                                                    <a href="https://www.udemy.com/course/desarrollo-web-completo-con-html5-css3-js-php-y-mysql/" target="_blank"><h4 class="timeline-title">Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL</h4></a>
+                                                    <p class="timeline-text"> Metodologias HTML y CSS como Módulos y BEM, Código JavaScript Moderno (ES6), PHP y Fetch API, Sitios Web dínamicos con PHP y MYSQL + aplicaciones CRUD seguras con PHP y MySQL</p>
+                                                </div>
+                                                <!-- timeline item -->
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2022 - 2024
+                                                    </h3>
+                                                    <a href="https://www.udemy.com/course/react-de-principiante-a-experto-creando-mas-de-10-aplicaciones/" target="_blank"><h4 class="timeline-title">React y TypeScript - La Guía Completa Creando +10 Proyectos</h4></a>
+                                                    <p class="timeline-text">React desde cero: Hooks y State hasta TypeScript, Zod, Zustand, React Query, Next.js, React Router, MERN y PERN</p>
+                                                </div>
+                                                <!-- timeline item -->
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2032 - 2024
+                                                    </h3>
+                                                    <a href="https://www.udemy.com/course/nodejs-bootcamp-desarrollo-web-mvc-y-rest-apis/" target="_blank"><h4 class="timeline-title">Node.js - Bootcamp Desarrollo Web inc. MVC y REST APIs</h4></a>
+                                                    <p class="timeline-text">MVC, Rest API's, ORMs, Enviar Emails, Autenticación, Subir Archivos, EJS, Pug, React, Integrar Mapas (Leaflet) + Envío de Emails
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Fin Sección About -->
+
+            <!-- Sección Servicios -->
+            <!-- <section id="services" class="service section">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Services</h2>
+                        </div>
+                    </div>
+                    <div class="row"> -->
+                        <!-- Item Servicio -->
+                        <!-- <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-mobile-alt"></i>
+                                </div>
+                                <h4>Web Design</h4>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quae autem velit!</p>
+                            </div>
+                        </div> -->
+                        <!-- Fin Item Servicio -->
+                        <!-- Item Servicio -->
+                        <!-- <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-laptop-code"></i>
+                                </div>
+                                <h4>Web Design</h4>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quae autem velit!</p>
+                            </div>
+                        </div> -->
+                        <!-- Fin Item Servicio -->
+                        <!-- Item Servicio -->
+                        <!-- <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-palette"></i>
+                                </div>
+                                <h4>Web Design</h4>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quae autem velit!</p>
+                            </div>
+                        </div> -->
+                        <!-- Fin Item Servicio -->
+                        <!-- Item Servicio -->
+                        <!-- <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-code"></i>
+                                </div>
+                                <h4>Web Design</h4>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quae autem velit!</p>
+                            </div>
+                        </div> -->
+                        <!-- Fin Item Servicio -->
+                        <!-- Item Servicio -->
+                        <!-- <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                                <h4>Web Design</h4>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quae autem velit!</p>
+                            </div>
+                        </div> -->
+                        <!-- Fin Item Servicio -->
+                        <!-- Item Servicio -->
+                        <!-- <div class="service-item padd-15">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-bullhorn"></i>
+                                </div>
+                                <h4>Web Design</h4>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quae autem velit!</p>
+                            </div>
+                        </div> -->
+                        <!-- Fin Item Servicio -->
+                    <!-- </div>
+                </div>
+            </section> -->
+            <!-- Fin Sección Servicios -->
+            <section id="portfolio" class="portfolio section">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>portfolio</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="portfolio-heading padd-15">
+                            <h2>My Last Projects:</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Item Portfolio -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <a href="https://bejewelled-kashata-688a20.netlify.app/" target="_blank"><img src="images/Pacientes.png" alt="imagen"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fin Item Portfolio -->
+                        <!-- Item Portfolio -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <a href="https://vocal-puppy-b4a7ec.netlify.app/" target="_blank"><img src="images/Gastos.png" alt="imagen"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fin Item Portfolio -->
+                        <!-- Item Portfolio -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <a href="https://visionary-rolypoly-14fabd.netlify.app/" target="_blank"><img src="images/Calorias.png" alt="imagen"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fin Item Portfolio -->
+                        <!-- Item Portfolio -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <a href="https://incandescent-sawine-ba7cca.netlify.app/" target="_blank"><img src="images/Guitarra.png" alt="imagen"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fin Item Portfolio -->
+                        <!-- Item Portfolio -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <a href="https://hungry-ardinghelli-47369a.netlify.app/"><img src="images/RealState.png" alt="imagen"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fin Item Portfolio -->
+                        <!-- Item Portfolio -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <a href="https://regal-phoenix-55f21d.netlify.app/" target="_blank"><img src="images/Veterinaria.png" alt="imagen"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fin Item Portfolio -->
+                    </div>
+                    <h3 class="hello">All the codes, including those referring to Bakcend, are on my Personal Github</h3>
+                </div>
+            </section>
+            <!-- Sección Portfolio -->
+
+            <!-- Sección Contacto -->
+            <section id="contact" class="contact section">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Contact Me</h2>
+                        </div>
+                    </div>
+                    <h3 class="contact-title padd-15">Have You Any Questions?</h3>
+                    <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICES</h4>
+                    <div class="row">
+                        <!-- Item Info Contacto -->
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-phone"></i></div>
+                            <h4>Call Us On</h4>
+                            <p>116-212-7899</p>
+                        </div>
+                        <!-- Fin Item Info Contacto -->
+                        <!-- Item Info Contacto -->
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
+                            <h4>Email</h4>
+                            <p>hernancalvofullstack@gmail.com</p>
+                        </div>
+                        <!-- Fin Item Info Contacto -->
+                        <!-- Item Info Contacto -->
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-envelope"></i></div>
+                            <h4>Github</h4>
+                            <a href="https://github.com/HernanCalvoFullStack" target="_blank"><p>HernanCalvoFullStack</p></a>
+                        </div>
+                        <!-- Fin Item Info Contacto -->
+                        <!-- Item Info Contacto -->
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-globe-europe"></i></div>
+                            <h4>website</h4>
+                            <a href="https://www.linkedin.com/in/hernan-calvo-937a64199/" target="_blank"><p>Linkedin</p></a>
+                        </div>
+                        <!-- Fin Item Info Contacto -->
+                    </div>
+                    <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
+                    <h4 class="contact-sub-title padd-15">I'M VERY RESPONSIVE TO MESSAGES</h4>
+                    <!-- Formulario Contacto -->
+                    <!-- <div class="row">
+                        <div class="contact-form padd-15">
+                            <div class="row">
+                                <div class="form-item col-6 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="form-item col-6 padd-15">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Subject">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                       <textarea name="" class="form-control" id="" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <button type="submit" class="btn">Send Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- Fin Formulario Contacto -->
+                </div>
+            </section>
+            <!-- Fin Sección Contacto -->
+            <!-- Fin Sección Portfolio -->
+        </div>
+        <!-- Fin Contenido -->
+    </div>
+    <!-- Fin Contenedor Principal -->
+
+    <!-- Cambiar Colores -->
+    <div class="style-switcher">
+        <div class="style-switcher-toggler s-icon">
+            <i class="fas fa-cog fa-spin"></i>
+        </div>
+        <div class="day-night s-icon">
+            <i class="fas"></i>
+        </div>
+        <h4>Theme Colors</h4>
+        <div class="colors">
+            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+        </div>
+    </div>
+    <!-- Fin Cambiar Colores -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>">
+    <script src="/js/scripts.js"></script>
+    <script src="js/style-switcher.js"></script>
+</body>
+</html>
