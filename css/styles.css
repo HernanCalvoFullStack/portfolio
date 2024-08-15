@@ -112,6 +112,19 @@ ul {
     position: relative;
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.gallery .image {
+    aspect-ratio: 2/1;
+    border-radius: 2.5px;
+    object-fit: cover;
+}
+
+
 .btn {
     font-size: 1.6rem;
     font-weight: 500;
@@ -300,6 +313,11 @@ h3.my-profession {
 
 .typing {
     color: var(--skin-color);
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
 }
 
 .home-info p {
@@ -621,7 +639,7 @@ h3.my-profession {
 
 .portfolio .portfolio-item {
     flex: 0 0 33.33%;
-    max-width: 33.33%;
+    max-width: 100%;
     margin-bottom: 3rem;
 }
 
@@ -635,6 +653,7 @@ h3.my-profession {
 .portfolio .portfolio-item-inner .portfolio-img img {
     width: 100%;
     display: block;
+    object-fit: cover;
 }
 
 /* Contacto */
@@ -745,7 +764,10 @@ h3.my-profession {
     .portfolio .portfolio-item,
     .service .service-item {
         flex: 0 0 50%;
-        max-width: 50%;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .home .home-info {
@@ -769,6 +791,10 @@ h3.my-profession {
     .about .about-content .personal-info {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+
+    .gallery {
+        display: block;
     }
 }
 
