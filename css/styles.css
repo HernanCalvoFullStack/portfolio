@@ -51,6 +51,10 @@ ul {
     opacity: 1;
 }
 
+.section-skills {
+    min-height: auto;
+}
+
 .main-content {
     padding-left: 27rem;
 }
@@ -318,6 +322,7 @@ h3.my-profession {
 .flex {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .home-info p {
@@ -390,13 +395,13 @@ h3.my-profession {
 }
 
 .about .about-content .personal-info {
-    flex: 0 0 60%;
-    max-width: 60%;
+    flex: 0 0 100%;
+    max-width: 100%;
     margin-top: 4rem;
 }
 
 .about .about-content .personal-info .info-item {
-    flex: 0 0 50%;
+    flex: 0 0 100%;
     max-width: 50%;
 }
 
