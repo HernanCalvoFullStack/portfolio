@@ -13,7 +13,7 @@
 }
 
 .style-switcher.open {
-    transform: translateX(-25px);
+    transform: translateX(-12px);
 }
 
 .style-switcher .s-icon {
@@ -21,19 +21,24 @@
     height: 40px;
     width: 40px;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.8rem;
     background: var(--bg-black-100);
     color: var(--text-black-900);
     right: 100%;
     border: 1px solid var(--bg-black-50);
-    margin-right: 25px;
+    margin-right: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 50%;
+    box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.12);
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .style-switcher .s-icon i {
-    line-height: 40px;
+    line-height: 1;
 }
 
 .style-switcher .style-switcher-toggler {
@@ -41,13 +46,13 @@
 }
 
 .style-switcher .day-night {
-    top: 55px;
+    top: 52px;
 }
 
 .style-switcher h4 {
     margin: 0 0 10px;
     color: var(--text-black-700);
-    font-size: 16px;
+    font-size: 1.4rem;
     font-weight: 600;
     text-transform: capitalize;
 }
@@ -56,13 +61,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 0.4rem;
 }
 
-.style-switcher .colors span {
+.style-switcher .colors button {
     display: inline-block;
     height: 30px;
     width: 30px;
     border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    padding: 0;
 }
 
 .style-switcher .color-1 {
