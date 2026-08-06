@@ -655,7 +655,12 @@ h3.my-profession {
 }
 
 .about .about-content .personal-info .info-item .enlace {
-    word-break: break-all;
+    word-break: normal;
+    overflow-wrap: normal;
+}
+
+.about .about-content .personal-info .email-link {
+    white-space: nowrap;
 }
 
 .about .about-content .personal-info .buttons {
@@ -1666,6 +1671,11 @@ h3.my-profession {
     .about .about-content .personal-info .info-item p span {
         display: block;
         margin-left: 0;
+    }
+
+    .about .about-content .personal-info .email-link {
+        white-space: normal;
+        word-break: break-word;
     }
 }
 
