@@ -47,9 +47,10 @@ CV = {
         "summary_title": "PROFESSIONAL SUMMARY",
         "summary": (
             "Semi Senior Full Stack Developer with 2+ years of professional experience building and migrating "
-            "production CRM systems, REST APIs and third-party integrations. Strong focus on Laravel, React and "
-            "TypeScript. Comfortable owning end-to-end features, database cleanup and system modernization. "
-            "Based in Buenos Aires; open to full-time on-site, hybrid or remote roles."
+            "production CRM systems, REST APIs and third-party integrations, plus around 6 years of training, "
+            "personal projects and freelance work. Strong focus on Laravel, React and TypeScript. Comfortable "
+            "owning end-to-end features, database cleanup and system modernization. Based in Buenos Aires; "
+            "open to full-time on-site, hybrid or remote roles."
         ),
         "skills_title": "TECHNICAL SKILLS",
         "skills": [
@@ -98,6 +99,12 @@ CV = {
         ],
         "courses_title": "RELEVANT COURSES",
         "courses": [
+            "Laravel 13 — From Fundamentals to a SaaS with AI (2026)",
+            "Full Stack Next.js — Drizzle ORM, Better Auth, AI SDK & TypeScript (2026)",
+            "Full Stack Node.js, React, TypeScript, NestJS & Next.js (2025)",
+            "SQL from Scratch (2025)",
+            "Docker — Practical Guide for Developers (2025)",
+            "Laravel 9 — Apps and Sites with PHP 8 and MVC (2024)",
             "React and TypeScript — The Complete Guide (+10 projects)",
             "Node.js Bootcamp — MVC and REST APIs",
             "Modern JavaScript — Definitive Guide (+20 projects)",
@@ -122,9 +129,10 @@ CV = {
         "summary_title": "PERFIL PROFESIONAL",
         "summary": (
             "Desarrollador Full Stack Semi Senior con más de 2 años de experiencia profesional construyendo y migrando "
-            "sistemas CRM en producción, APIs REST e integraciones con terceros. Fuerte foco en Laravel, React y "
-            "TypeScript. Cómodo siendo dueño de features de punta a punta, limpieza de bases de datos y modernización "
-            "de sistemas. Basado en Buenos Aires; abierto a roles full-time presenciales, híbridos o remotos."
+            "sistemas CRM en producción, APIs REST e integraciones con terceros, y alrededor de 6 años capacitándome, "
+            "con proyectos personales y trabajo freelance. Fuerte foco en Laravel, React y TypeScript. Cómodo siendo "
+            "dueño de features de punta a punta, limpieza de bases de datos y modernización de sistemas. Basado en "
+            "Buenos Aires; abierto a roles full-time presenciales, híbridos o remotos."
         ),
         "skills_title": "HABILIDADES TÉCNICAS",
         "skills": [
@@ -173,6 +181,12 @@ CV = {
         ],
         "courses_title": "CURSOS RELEVANTES",
         "courses": [
+            "Laravel 13 — Desde los fundamentos hasta crear un SaaS con IA (2026)",
+            "Full Stack Next.js — Drizzle ORM, Better Auth, AI SDK y TypeScript (2026)",
+            "Full Stack Node.js, React, TypeScript, NestJS y Next.js (2025)",
+            "SQL de cero (2025)",
+            "Docker — Guía práctica para desarrolladores (2025)",
+            "Laravel 9 — Apps y sitios web con PHP 8 y MVC (2024)",
             "React y TypeScript — Guía Completa (+10 proyectos)",
             "Bootcamp Node.js — MVC y REST APIs",
             "JavaScript Moderno — Guía Definitiva (+20 proyectos)",

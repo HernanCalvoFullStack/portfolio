@@ -15,7 +15,7 @@ const translations = {
       badge: "Semi Senior Full Stack Developer",
       hello: "Hello, my name is",
       im: "I'm a",
-      bio: "Semi Senior Full Stack Developer with 2+ years of professional experience at Interassist SA. I work with Laravel, React and TypeScript building REST APIs, CRM systems and integrations. Based in Buenos Aires — open to full-time roles.",
+      bio: "Semi Senior Full Stack Developer with 2+ years of professional experience at Interassist SA, plus around 6 years training, building personal projects and working as a freelancer. I work with Laravel, React and TypeScript building REST APIs, CRM systems and integrations. Based in Buenos Aires — open to full-time roles.",
       downloadCv: "Download CV",
       contactMe: "Contact me",
       seeWork: "See my work",
@@ -84,7 +84,7 @@ const translations = {
       title: "About Me",
       heading: "I'm Hernán Calvo and",
       role: "Semi Senior Full Stack Developer",
-      text: "Semi Senior Full Stack Developer focused on Laravel, React and TypeScript. I also study Data Science at Universidad Siglo 21 and I'm finishing a Mathematics teaching degree. I started programming by building Excel tools for sports tournaments, then moved into web development and production systems.",
+      text: "Semi Senior Full Stack Developer focused on Laravel, React and TypeScript. Beyond my current professional role, I've spent around 6 years training, freelancing and shipping personal products. I also study Data Science at Universidad Siglo 21 and I'm finishing a Mathematics teaching degree. I started programming by building Excel tools for sports tournaments, then moved into web development and production systems.",
       birthday: "Birthday:",
       age: "Age:",
       city: "City:",
@@ -100,6 +100,24 @@ const translations = {
       edu1Title: "Bachelor of Data Science",
       edu1Text:
         "Undergraduate degree at Universidad Siglo 21 — distance modality — 18 subjects approved in 1.5 years.",
+      edu7Title: "Laravel 13 — From Fundamentals to a SaaS with AI",
+      edu7Text:
+        "Laravel 13 with Inertia + React, auth, Eloquent, Cashier subscriptions, Pest testing and AI SDK agents/tools.",
+      edu8Title: "Full Stack Next.js — Drizzle ORM, Better Auth, AI SDK & TypeScript",
+      edu8Text:
+        "Next.js App Router, Drizzle ORM, Better Auth, AI SDK, Zod, Redis rate limiting and real-time with websockets.",
+      edu9Title: "Full Stack Node.js, React, TypeScript, NestJS & Next.js",
+      edu9Text:
+        "Three full-stack projects with Express, NestJS, React, Next.js, TypeScript, ORMs and deployments.",
+      edu10Title: "SQL from Scratch",
+      edu10Text:
+        "SQL fundamentals for querying, joining and analyzing data in relational databases.",
+      edu11Title: "Docker — Practical Guide for Developers",
+      edu11Text:
+        "Docker CLI, Dockerfiles, multi-stage builds, Compose, registries, GitHub Actions and intro to Kubernetes.",
+      edu12Title: "Laravel 9 — Apps and Sites with PHP 8 and MVC",
+      edu12Text:
+        "Laravel MVC, Sail/Docker, Livewire, Tailwind, React integrations, APIs and authentication with real projects.",
       edu2Title:
         "CSS The Complete Guide — Flexbox, CSS Grid, SASS +20 projects",
       edu2Text:
@@ -150,7 +168,7 @@ const translations = {
       badge: "Desarrollador Full Stack Semi Senior",
       hello: "Hola, me llamo",
       im: "Soy",
-      bio: "Desarrollador Full Stack Semi Senior con más de 2 años de experiencia profesional en Interassist SA. Trabajo con Laravel, React y TypeScript armando APIs REST, sistemas CRM e integraciones. Basado en Buenos Aires — abierto a roles full-time.",
+      bio: "Desarrollador Full Stack Semi Senior con más de 2 años de experiencia profesional en Interassist SA, y alrededor de 6 años capacitándome, con proyectos personales y trabajo freelance. Trabajo con Laravel, React y TypeScript armando APIs REST, sistemas CRM e integraciones. Basado en Buenos Aires — abierto a roles full-time.",
       downloadCv: "Descargar CV",
       contactMe: "Contactame",
       seeWork: "Ver mi trabajo",
@@ -220,7 +238,7 @@ const translations = {
       title: "Sobre mí",
       heading: "Soy Hernán Calvo y",
       role: "Desarrollador Full Stack Semi Senior",
-      text: "Desarrollador Full Stack Semi Senior enfocado en Laravel, React y TypeScript. También estudio Ciencia de Datos en la Universidad Siglo 21 y estoy terminando el profesorado de Matemática. Empecé programando herramientas en Excel para torneos deportivos y después pasé al desarrollo web y sistemas en producción.",
+      text: "Desarrollador Full Stack Semi Senior enfocado en Laravel, React y TypeScript. Más allá del rol profesional actual, llevo alrededor de 6 años capacitándome, haciendo freelance y sacando productos personales. También estudio Ciencia de Datos en la Universidad Siglo 21 y estoy terminando el profesorado de Matemática. Empecé programando herramientas en Excel para torneos deportivos y después pasé al desarrollo web y sistemas en producción.",
       birthday: "Cumpleaños:",
       age: "Edad:",
       city: "Ciudad:",
@@ -236,6 +254,24 @@ const translations = {
       edu1Title: "Licenciatura en Ciencia de Datos",
       edu1Text:
         "Carrera de grado en la Universidad Siglo 21 — modalidad a distancia — 18 materias aprobadas en 1.5 años.",
+      edu7Title: "Laravel 13 — Desde los fundamentos hasta crear un SaaS con IA",
+      edu7Text:
+        "Laravel 13 con Inertia + React, autenticación, Eloquent, suscripciones con Cashier, testing con Pest y agentes/tools con AI SDK.",
+      edu8Title: "Full Stack Next.js — Drizzle ORM, Better Auth, AI SDK y TypeScript",
+      edu8Text:
+        "Next.js App Router, Drizzle ORM, Better Auth, AI SDK, Zod, rate limiting con Redis y tiempo real con websockets.",
+      edu9Title: "Full Stack Node.js, React, TypeScript, NestJS y Next.js",
+      edu9Text:
+        "Tres proyectos full stack con Express, NestJS, React, Next.js, TypeScript, ORMs y deployments.",
+      edu10Title: "SQL de cero",
+      edu10Text:
+        "Fundamentos de SQL para consultar, relacionar y analizar datos en bases relacionales.",
+      edu11Title: "Docker — Guía práctica de uso para desarrolladores",
+      edu11Text:
+        "Docker CLI, Dockerfiles, multi-stage builds, Compose, registros, GitHub Actions e intro a Kubernetes.",
+      edu12Title: "Laravel 9 — Apps y sitios web con PHP 8 y MVC",
+      edu12Text:
+        "Laravel MVC, Sail/Docker, Livewire, Tailwind, integración con React, APIs y autenticación con proyectos reales.",
       edu2Title: "CSS La Guía Completa — Flexbox, CSS Grid, SASS +20 proyectos",
       edu2Text:
         "Flexbox, CSS Grid, Custom Properties, SASS, Mixins, workflows con Gulp, animaciones, RWD, transitions y transformations.",
