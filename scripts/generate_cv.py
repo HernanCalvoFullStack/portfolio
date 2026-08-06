@@ -83,11 +83,11 @@ CV = {
                 ],
             },
             {
-                "role": "Android App — Expense Splitting",
+                "role": "Web & Android App — Expense Splitting",
                 "place": "Cuentas Claras",
                 "dates": "Personal project  ·  Not published yet",
                 "bullets": [
-                    "Expense calculator for one or many days, with adults, linked children, exclusions and suggested compensation payments.",
+                    "Web and Android app to split expenses for one day or multi-day trips; children link to adults with a payment percentage, per-expense participants, and suggested compensation transfers.",
                 ],
             },
         ],
@@ -158,11 +158,11 @@ CV = {
                 ],
             },
             {
-                "role": "App Android — División de gastos",
+                "role": "App web y Android — División de gastos",
                 "place": "Cuentas Claras",
                 "dates": "Proyecto personal  ·  Aún no publicada",
                 "bullets": [
-                    "Calculadora de gastos para uno o varios días, con adultos, hijos vinculados, exclusiones y compensación sugerida.",
+                    "App web y Android para dividir gastos de un día o viajes de varios días; hijos vinculados a adultos con porcentaje, participantes por gasto y compensación sugerida.",
                 ],
             },
         ],

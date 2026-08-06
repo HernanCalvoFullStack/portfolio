@@ -46,8 +46,6 @@ const translations = {
       requestDemo: "Request a demo",
       demoOnRequest:
         "Private production system — live demo available on request.",
-      demoLabel: "Demo video",
-      demoHint: "To show the demo, add this file:",
       interassist: {
         role: "Semi Senior Full Stack Developer",
         industry: "Travel Assistance",
@@ -72,13 +70,14 @@ const translations = {
         b3: "Mercado Pago integration and monetization packages.",
       },
       cuentas: {
-        role: "Android app — expense splitting",
+        role: "Web & Android app — expense splitting",
         tenure: "Personal project — not published yet",
         summary:
-          "Expense calculator for one or many days, with adults, linked children, exclusions and suggested compensation payments.",
-        b1: "Track spending for a single day or multiple days.",
-        b2: "Adults and children linked to adults with configurable spend percentage.",
-        b3: "Exclude users from specific expenses; final split with suggested compensation if needed.",
+          "Web and Android app for splitting expenses for a single day or multiple days — for example vacation trips. You add the people in the split, link children to the matching adult with a payment percentage, choose who takes part in each expense, and the app calculates a suggested split with compensation when needed.",
+        b1: "Split expenses for one day or many days (trips, vacations, shared outings).",
+        b2: "Add people to the group; children link to an adult with a configurable percentage of what that adult pays.",
+        b3: "When logging an expense, choose which adults or children take part; final calculation suggests the split and compensation transfers if needed.",
+        demoNote: "Personal project — live demo available on request.",
       },
     },
     about: {
@@ -183,8 +182,6 @@ const translations = {
       requestDemo: "Pedir una demo",
       demoOnRequest:
         "Sistema privado en producción — demo en vivo disponible a pedido.",
-      demoLabel: "Video demo",
-      demoHint: "Para mostrar el demo, agregá este archivo:",
       interassist: {
         role: "Desarrollador Full Stack Semi Senior",
         industry: "Asistencia al Viajero",
@@ -209,13 +206,14 @@ const translations = {
         b3: "Integración con Mercado Pago y paquetes de monetización.",
       },
       cuentas: {
-        role: "App Android — división de gastos",
+        role: "App web y Android — división de gastos",
         tenure: "Proyecto personal — aún no publicada",
         summary:
-          "Calculadora de gastos para uno o varios días, con adultos, hijos vinculados, exclusiones y pagos sugeridos por compensación.",
-        b1: "Registro de gastos de un día o de varios días.",
-        b2: "Adultos e hijos vinculados a adultos con porcentaje de gasto configurable.",
-        b3: "Exclusión de usuarios en ciertos gastos; cálculo final y compensación sugerida si hace falta.",
+          "Aplicación web y para Android para dividir gastos de un día o de varios días — por ejemplo, viajes de vacaciones. Se agregan las personas de la división, los hijos se vinculan al adulto que corresponda con un porcentaje de cuánto paga el chico en relación al adulto, al cargar cada gasto se elige quién entra, y al final la app calcula la división y sugiere compensaciones si hace falta.",
+        b1: "División de gastos de un día o de muchos días (viajes, vacaciones, salidas compartidas).",
+        b2: "Se agregan las personas del grupo; los hijos se vinculan a un adulto con un porcentaje configurable de lo que paga ese adulto.",
+        b3: "Al cargar un gasto se eligen los adultos o chicos que participan; el cálculo final sugiere la división y las transferencias por compensación si hace falta.",
+        demoNote: "Proyecto personal — demo en vivo disponible a pedido.",
       },
     },
     about: {
@@ -404,17 +402,6 @@ function initSkillsAnimation() {
   cards.forEach((card) => observer.observe(card));
 }
 
-function initExperienceVideos() {
-  document.querySelectorAll(".exp-media").forEach((media) => {
-    const video = media.querySelector("video");
-    if (!video) return;
-
-    const markReady = () => media.classList.add("has-video");
-    video.addEventListener("loadeddata", markReady);
-    video.addEventListener("error", () => media.classList.remove("has-video"));
-  });
-}
-
 function initMobileNav() {
   const toggler = document.getElementById("nav-toggler");
   const sidebar = document.getElementById("sidebar");
@@ -482,7 +469,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setAge();
   applyTranslations(currentLang);
   initSkillsAnimation();
-  initExperienceVideos();
   initMobileNav();
   initActiveNav();
 
