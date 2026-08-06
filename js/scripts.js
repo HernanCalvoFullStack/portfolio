@@ -7,7 +7,6 @@ const translations = {
     nav: {
       home: "Home",
       experience: "Experience",
-      portfolio: "Portfolio",
       looking: "Looking for",
       about: "About",
       contact: "Contact",
@@ -44,6 +43,8 @@ const translations = {
       title: "Experience",
       intro: "Professional work and personal products I've built and shipped.",
       visitSite: "Visit site",
+      requestDemo: "Request a demo",
+      demoOnRequest: "Private production system — live demo available on request.",
       demoLabel: "Demo video",
       demoHint: "To show the demo, add this file:",
       interassist: {
@@ -79,40 +80,6 @@ const translations = {
         b3: "Exclude users from specific expenses; final split with suggested compensation if needed.",
       },
     },
-    portfolio: {
-      title: "Portfolio",
-      heading: "Selected practice projects",
-      githubNote: "All the code, including backend, is on my",
-      githubLink: "GitHub",
-      view: "View project",
-      watch: "Watch demo",
-      projects: {
-        demo: {
-          title: "Full Stack Demo",
-          desc: "Screen recording of a complete full-stack application flow.",
-        },
-        products: {
-          title: "Product Administration",
-          desc: "REST API + React frontend for product CRUD management.",
-        },
-        crypto: {
-          title: "Cryptocurrency Quoter",
-          desc: "Live crypto prices with currency conversion via external API.",
-        },
-        expenses: {
-          title: "Expense Control",
-          desc: "Budget tracking with categories and spending overview.",
-        },
-        calories: {
-          title: "Calorie Counter",
-          desc: "Track daily calories from meals and activities.",
-        },
-        guitar: {
-          title: "Guitar Store",
-          desc: "E-commerce cart experience for a guitar catalog.",
-        },
-      },
-    },
     about: {
       title: "About Me",
       heading: "I'm Hernán Calvo and",
@@ -125,8 +92,10 @@ const translations = {
       available: "Available",
       downloadCv: "Download CV",
       hire: "Hire Me",
-      education: "Education",
-      courses: "Courses",
+      education: "Education & Courses",
+      educationNote:
+        "Formal studies and courses. Use “View site” to open the program or course page (course projects live there).",
+      viewSite: "View site",
       present: "Present",
       edu1Title: "Bachelor of Data Science",
       edu1Text:
@@ -164,6 +133,7 @@ const translations = {
     },
     theme: {
       colors: "Theme Colors",
+      mode: "Light / Dark",
     },
   },
   es: {
@@ -171,7 +141,6 @@ const translations = {
     nav: {
       home: "Inicio",
       experience: "Experiencia",
-      portfolio: "Portfolio",
       looking: "Qué busco",
       about: "Sobre mí",
       contact: "Contacto",
@@ -208,6 +177,8 @@ const translations = {
       title: "Experiencia",
       intro: "Trabajo profesional y productos personales que construí y puse en producción.",
       visitSite: "Visitar sitio",
+      requestDemo: "Pedir una demo",
+      demoOnRequest: "Sistema privado en producción — demo en vivo disponible a pedido.",
       demoLabel: "Video demo",
       demoHint: "Para mostrar el demo, agregá este archivo:",
       interassist: {
@@ -243,40 +214,6 @@ const translations = {
         b3: "Exclusión de usuarios en ciertos gastos; cálculo final y compensación sugerida si hace falta.",
       },
     },
-    portfolio: {
-      title: "Portfolio",
-      heading: "Proyectos de práctica seleccionados",
-      githubNote: "Todo el código, incluyendo el backend, está en mi",
-      githubLink: "GitHub",
-      view: "Ver proyecto",
-      watch: "Ver demo",
-      projects: {
-        demo: {
-          title: "Demo Full Stack",
-          desc: "Grabación de pantalla del flujo completo de una aplicación full stack.",
-        },
-        products: {
-          title: "Administración de Productos",
-          desc: "API REST + frontend React para gestión CRUD de productos.",
-        },
-        crypto: {
-          title: "Cotizador de Criptomonedas",
-          desc: "Precios en vivo con conversión de moneda mediante API externa.",
-        },
-        expenses: {
-          title: "Control de Gastos",
-          desc: "Control de presupuesto con categorías y resumen de gastos.",
-        },
-        calories: {
-          title: "Contador de Calorías",
-          desc: "Registro diario de calorías de comidas y actividades.",
-        },
-        guitar: {
-          title: "Tienda de Guitarras",
-          desc: "Experiencia de carrito e-commerce para un catálogo de guitarras.",
-        },
-      },
-    },
     about: {
       title: "Sobre mí",
       heading: "Soy Hernán Calvo y",
@@ -289,8 +226,10 @@ const translations = {
       available: "Disponible",
       downloadCv: "Descargar CV",
       hire: "Contratame",
-      education: "Educación",
-      courses: "Cursos",
+      education: "Educación y cursos",
+      educationNote:
+        "Estudios formales y cursos. Usá “Ver el sitio” para abrir el programa o la página del curso (ahí están los proyectos del curso).",
+      viewSite: "Ver el sitio",
       present: "Actualidad",
       edu1Title: "Licenciatura en Ciencia de Datos",
       edu1Text:
@@ -328,6 +267,7 @@ const translations = {
     },
     theme: {
       colors: "Colores del tema",
+      mode: "Claro / Oscuro",
     },
   },
 };
@@ -359,6 +299,25 @@ function getByPath(obj, path) {
   return path.split(".").reduce((acc, key) => (acc ? acc[key] : undefined), obj);
 }
 
+const CV_FILES = {
+  en: {
+    href: "./archivos/CV Hernan Calvo (English).pdf",
+    download: "CV Hernan Calvo (English).pdf",
+  },
+  es: {
+    href: "./archivos/CV Hernan Calvo (Espanol).pdf",
+    download: "CV Hernan Calvo (Espanol).pdf",
+  },
+};
+
+function updateCvDownloads(lang) {
+  const file = CV_FILES[lang] || CV_FILES.en;
+  document.querySelectorAll(".js-cv-download").forEach((link) => {
+    link.setAttribute("href", file.href);
+    link.setAttribute("download", file.download);
+  });
+}
+
 function applyTranslations(lang) {
   const dict = translations[lang];
   if (!dict) return;
@@ -383,6 +342,7 @@ function applyTranslations(lang) {
     );
   }
 
+  updateCvDownloads(lang);
   initTyped(lang);
 }
 
@@ -402,7 +362,7 @@ function initTyped(lang) {
     typeSpeed: 90,
     backSpeed: 50,
     backDelay: 1400,
-    loop: true,
+  loop: true,
   });
 }
 
@@ -462,6 +422,12 @@ function initMobileNav() {
     toggler.setAttribute("aria-expanded", open ? "true" : "false");
     toggler.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     if (backdrop) backdrop.hidden = !open;
+
+    const icon = toggler.querySelector("i");
+    if (icon) {
+      icon.classList.toggle("fa-bars-staggered", !open);
+      icon.classList.toggle("fa-xmark", open);
+    }
   };
 
   toggler.addEventListener("click", () => {

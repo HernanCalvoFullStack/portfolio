@@ -19,7 +19,7 @@
     <meta name="twitter:description" content="Laravel · React · TypeScript. CRM, REST APIs and production integrations.">
     <meta name="twitter:image" content="/images/hero.jpg">
 
-    <link rel="icon" href="images/app-icon.png" type="image/png">
+    <link rel="icon" href="images/logo-round.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/color-1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -37,7 +37,7 @@
     <div class="main-container">
 
         <button type="button" class="nav-toggler" id="nav-toggler" aria-label="Open menu" aria-expanded="false" aria-controls="sidebar">
-            <span></span>
+            <i class="fa-solid fa-bars-staggered" aria-hidden="true"></i>
         </button>
 
         <!-- Aside -->
@@ -49,13 +49,28 @@
             <ul class="nav">
                 <li><a href="#home" class="active"><i class="fa fa-home" aria-hidden="true"></i><span data-i18n="nav.home">Home</span></a></li>
                 <li><a href="#experience"><i class="fa fa-briefcase" aria-hidden="true"></i><span data-i18n="nav.experience">Experience</span></a></li>
-                <li><a href="#portfolio"><i class="fa fa-code" aria-hidden="true"></i><span data-i18n="nav.portfolio">Portfolio</span></a></li>
                 <li><a href="#looking"><i class="fa fa-bullseye" aria-hidden="true"></i><span data-i18n="nav.looking">Looking for</span></a></li>
                 <li><a href="#about"><i class="fa fa-user" aria-hidden="true"></i><span data-i18n="nav.about">About</span></a></li>
                 <li><a href="#contact"><i class="fa fa-comments" aria-hidden="true"></i><span data-i18n="nav.contact">Contact</span></a></li>
             </ul>
 
             <div class="aside-actions">
+                <div class="aside-theme" aria-label="Theme settings">
+                    <div class="aside-theme-row">
+                        <button type="button" class="day-night aside-theme-btn" aria-label="Toggle dark mode">
+                            <i class="fas" aria-hidden="true"></i>
+                            <span data-i18n="theme.mode">Theme</span>
+                        </button>
+                    </div>
+                    <p class="aside-theme-label" data-i18n="theme.colors">Theme Colors</p>
+                    <div class="colors">
+                        <button type="button" class="color-1" onclick="setActiveStyle('color-1')" aria-label="Color 1"></button>
+                        <button type="button" class="color-2" onclick="setActiveStyle('color-2')" aria-label="Color 2"></button>
+                        <button type="button" class="color-3" onclick="setActiveStyle('color-3')" aria-label="Color 3"></button>
+                        <button type="button" class="color-4" onclick="setActiveStyle('color-4')" aria-label="Color 4"></button>
+                        <button type="button" class="color-5" onclick="setActiveStyle('color-5')" aria-label="Color 5"></button>
+                    </div>
+                </div>
                 <button type="button" id="lang-toggle" class="lang-btn" aria-label="Cambiar a español">ES</button>
             </div>
         </aside>
@@ -74,7 +89,7 @@
                             <h3 class="my-profession"><span data-i18n="home.im">I'm a</span> <span class="typing"></span></h3>
                             <p class="justify" data-i18n="home.bio">Semi Senior Full Stack Developer with 2+ years of professional experience at Interassist SA. I work with Laravel, React and TypeScript building REST APIs, CRM systems and integrations. Based in Buenos Aires — open to full-time roles.</p>
                             <div class="hero-actions">
-                                <a href="./archivos/CV Hernan Calvo (English).pdf" download="CV Hernan Calvo" class="btn" data-i18n="home.downloadCv">Download CV</a>
+                                <a href="./archivos/CV Hernan Calvo (English).pdf" download="CV Hernan Calvo (English).pdf" class="btn js-cv-download" data-i18n="home.downloadCv">Download CV</a>
                                 <a href="mailto:hernancalvofullstack@gmail.com" class="btn btn-outline" data-i18n="home.contactMe">Contact me</a>
                                 <a href="#experience" class="btn btn-ghost" data-i18n="home.seeWork">See my work</a>
                             </div>
@@ -212,18 +227,9 @@
                             <li>Google Wallet</li>
                             <li>Queues</li>
                         </ul>
-                        <div class="exp-media">
-                            <p class="exp-media-label" data-i18n="experience.demoLabel">Demo video</p>
-                            <!-- Drop your file at: archivos/interassist-demo.mp4 -->
-                            <video
-                                class="exp-video"
-                                controls
-                                playsinline
-                                preload="metadata"
-                                poster="images/logo.png"
-                                src="archivos/interassist-demo.mp4">
-                            </video>
-                            <p class="exp-media-hint"><span data-i18n="experience.demoHint">To show the demo, add this file:</span> <code>archivos/interassist-demo.mp4</code></p>
+                        <div class="exp-actions">
+                            <p class="exp-demo-note" data-i18n="experience.demoOnRequest">Private production system — live demo available on request.</p>
+                            <a href="#contact" class="btn exp-link" data-i18n="experience.requestDemo">Request a demo</a>
                         </div>
                     </article>
 
@@ -249,19 +255,8 @@
                             <li>Mercado Pago</li>
                             <li>MySQL</li>
                         </ul>
-                        <a class="btn exp-link" href="https://www.hcprode.com.ar" target="_blank" rel="noopener noreferrer" data-i18n="experience.visitSite">Visit site</a>
-                        <div class="exp-media">
-                            <p class="exp-media-label" data-i18n="experience.demoLabel">Demo video</p>
-                            <!-- Drop your file at: archivos/hcprode-demo.mp4 -->
-                            <video
-                                class="exp-video"
-                                controls
-                                playsinline
-                                preload="metadata"
-                                poster="images/logo-round.png"
-                                src="archivos/hcprode-demo.mp4">
-                            </video>
-                            <p class="exp-media-hint"><span data-i18n="experience.demoHint">To show the demo, add this file:</span> <code>archivos/hcprode-demo.mp4</code></p>
+                        <div class="exp-actions">
+                            <a class="btn exp-link" href="https://www.hcprode.com.ar" target="_blank" rel="noopener noreferrer" data-i18n="experience.visitSite">Visit site</a>
                         </div>
                     </article>
 
@@ -287,161 +282,18 @@
                         </ul>
                         <div class="exp-media">
                             <p class="exp-media-label" data-i18n="experience.demoLabel">Demo video</p>
-                            <!-- Drop your file at: archivos/cuentas-claras-demo.mp4 -->
+                            <!-- Drop your file at: archivos/cuentas-claras.mp4 -->
                             <video
                                 class="exp-video"
                                 controls
                                 playsinline
                                 preload="metadata"
                                 poster="images/app-icon.png"
-                                src="archivos/cuentas-claras-demo.mp4">
+                                src="archivos/cuentas-claras.mp4">
                             </video>
-                            <p class="exp-media-hint"><span data-i18n="experience.demoHint">To show the demo, add this file:</span> <code>archivos/cuentas-claras-demo.mp4</code></p>
+                            <p class="exp-media-hint"><span data-i18n="experience.demoHint">To show the demo, add this file:</span> <code>archivos/cuentas-claras.mp4</code></p>
                         </div>
                     </article>
-                </div>
-            </section>
-
-            <!-- Portfolio -->
-            <section id="portfolio" class="portfolio section">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2 data-i18n="portfolio.title">Portfolio</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="portfolio-heading padd-15">
-                            <h2 data-i18n="portfolio.heading">Selected practice projects</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="gallery">
-
-                            <article class="portfolio-item">
-                                <div class="portfolio-item-inner shadow-dark">
-                                    <div class="portfolio-img">
-                                        <video class="image video" src="archivos/Grabación de pantalla 2024-08-16 133434.mp4" controls poster="images/Adm. Productos.jpeg"></video>
-                                    </div>
-                                    <div class="portfolio-meta">
-                                        <div class="portfolio-badge" data-i18n="portfolio.watch">Watch demo</div>
-                                        <h4 data-i18n="portfolio.projects.demo.title">Full Stack Demo</h4>
-                                        <p data-i18n="portfolio.projects.demo.desc">Screen recording of a complete full-stack application flow.</p>
-                                        <ul class="tech-tags">
-                                            <li>MERN</li>
-                                            <li>PERN</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="portfolio-item">
-                                <a class="portfolio-item-inner shadow-dark" href="https://rest-apis-typescript-frontend-azure.vercel.app/" target="_blank" rel="noopener noreferrer">
-                                    <div class="portfolio-img">
-                                        <img class="image" src="images/Adm. Productos.jpeg" alt="Product Administration app screenshot">
-                                        <div class="portfolio-overlay">
-                                            <span><span data-i18n="portfolio.view">View project</span> <i class="fa fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="portfolio-meta">
-                                        <h4 data-i18n="portfolio.projects.products.title">Product Administration</h4>
-                                        <p data-i18n="portfolio.projects.products.desc">REST API + React frontend for product CRUD management.</p>
-                                        <ul class="tech-tags">
-                                            <li>Node</li>
-                                            <li>React</li>
-                                            <li>Sequelize</li>
-                                            <li>TypeScript</li>
-                                        </ul>
-                                    </div>
-                                </a>
-                            </article>
-
-                            <article class="portfolio-item">
-                                <a class="portfolio-item-inner shadow-dark" href="https://stirring-marzipan-b9a481.netlify.app/" target="_blank" rel="noopener noreferrer">
-                                    <div class="portfolio-img">
-                                        <img class="image" src="images/Crypto.jpeg" alt="Cryptocurrency quote app screenshot">
-                                        <div class="portfolio-overlay">
-                                            <span><span data-i18n="portfolio.view">View project</span> <i class="fa fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="portfolio-meta">
-                                        <h4 data-i18n="portfolio.projects.crypto.title">Cryptocurrency Quoter</h4>
-                                        <p data-i18n="portfolio.projects.crypto.desc">Live crypto prices with currency conversion via external API.</p>
-                                        <ul class="tech-tags">
-                                            <li>React</li>
-                                            <li>API</li>
-                                            <li>CSS</li>
-                                        </ul>
-                                    </div>
-                                </a>
-                            </article>
-
-                            <article class="portfolio-item">
-                                <a class="portfolio-item-inner shadow-dark" href="https://control-gastos-context-api.netlify.app/" target="_blank" rel="noopener noreferrer">
-                                    <div class="portfolio-img">
-                                        <img class="image" src="images/Gastos.png" alt="Expense control app screenshot">
-                                        <div class="portfolio-overlay">
-                                            <span><span data-i18n="portfolio.view">View project</span> <i class="fa fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="portfolio-meta">
-                                        <h4 data-i18n="portfolio.projects.expenses.title">Expense Control</h4>
-                                        <p data-i18n="portfolio.projects.expenses.desc">Budget tracking with categories and spending overview.</p>
-                                        <ul class="tech-tags">
-                                            <li>React</li>
-                                            <li>Context API</li>
-                                            <li>Charts</li>
-                                        </ul>
-                                    </div>
-                                </a>
-                            </article>
-
-                            <article class="portfolio-item">
-                                <a class="portfolio-item-inner shadow-dark" href="https://visionary-rolypoly-14fabd.netlify.app/" target="_blank" rel="noopener noreferrer">
-                                    <div class="portfolio-img">
-                                        <img class="image" src="images/Calorias.png" alt="Calorie counter app screenshot">
-                                        <div class="portfolio-overlay">
-                                            <span><span data-i18n="portfolio.view">View project</span> <i class="fa fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="portfolio-meta">
-                                        <h4 data-i18n="portfolio.projects.calories.title">Calorie Counter</h4>
-                                        <p data-i18n="portfolio.projects.calories.desc">Track daily calories from meals and activities.</p>
-                                        <ul class="tech-tags">
-                                            <li>React</li>
-                                            <li>TypeScript</li>
-                                            <li>State</li>
-                                        </ul>
-                                    </div>
-                                </a>
-                            </article>
-
-                            <article class="portfolio-item">
-                                <a class="portfolio-item-inner shadow-dark" href="https://incandescent-sawine-ba7cca.netlify.app/" target="_blank" rel="noopener noreferrer">
-                                    <div class="portfolio-img">
-                                        <img class="image" src="images/Guitarra.png" alt="Guitar store app screenshot">
-                                        <div class="portfolio-overlay">
-                                            <span><span data-i18n="portfolio.view">View project</span> <i class="fa fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="portfolio-meta">
-                                        <h4 data-i18n="portfolio.projects.guitar.title">Guitar Store</h4>
-                                        <p data-i18n="portfolio.projects.guitar.desc">E-commerce cart experience for a guitar catalog.</p>
-                                        <ul class="tech-tags">
-                                            <li>React</li>
-                                            <li>Cart</li>
-                                            <li>LocalStorage</li>
-                                        </ul>
-                                    </div>
-                                </a>
-                            </article>
-
-                        </div>
-                    </div>
-                    <h3 class="portfolio-github-note">
-                        <span data-i18n="portfolio.githubNote">All the code, including backend, is on my</span>
-                        <a href="https://github.com/HernanCalvoFullStack" target="_blank" rel="noopener noreferrer"><span data-i18n="portfolio.githubLink">GitHub</span></a>
-                    </h3>
                 </div>
             </section>
 
@@ -501,7 +353,7 @@
                                             <p>GitHub: <span><a class="enlace" href="https://github.com/HernanCalvoFullStack" target="_blank" rel="noopener noreferrer">HernanCalvoFullStack</a></span></p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p>Email: <span><a class="enlace" href="mailto:hernancalvofullstack@gmail.com">hernancalvofullstack@gmail.com</a></span></p>
+                                            <p>Email: <span><a class="enlace email-link" href="mailto:hernancalvofullstack@gmail.com">hernancalvofullstack<br>@gmail.com</a></span></p>
                                         </div>
                                         <div class="info-item padd-15">
                                             <p>Phone: <span><a class="enlace" href="tel:+541162127899">116-212-7899</a></span></p>
@@ -515,7 +367,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="buttons padd-15">
-                                            <a href="./archivos/CV Hernan Calvo (English).pdf" download="CV Hernan Calvo" class="btn" data-i18n="about.downloadCv">Download CV</a>
+                                            <a href="./archivos/CV Hernan Calvo (English).pdf" download="CV Hernan Calvo (English).pdf" class="btn js-cv-download" data-i18n="about.downloadCv">Download CV</a>
                                             <a href="#contact" class="btn hire-me" data-i18n="about.hire">Hire Me</a>
                                         </div>
                                     </div>
@@ -523,7 +375,8 @@
                             </div>
                             <div class="row">
                                 <div class="education padd-15">
-                                    <h3 class="title" data-i18n="about.education">Education</h3>
+                                    <h3 class="title" data-i18n="about.education">Education &amp; Courses</h3>
+                                    <p class="education-note" data-i18n="about.educationNote">Formal studies and courses. Use “View site” to open the program or course page (course projects live there).</p>
                                     <div class="row">
                                         <div class="timeline-box padd-15">
                                             <div class="timeline shadow-dark">
@@ -532,57 +385,72 @@
                                                     <h3 class="timeline-date">
                                                         <i class="fa fa-calendar"></i> 2023 - <span data-i18n="about.present">Present</span>
                                                     </h3>
-                                                    <a href="https://21.edu.ar/oferta-academica/licenciatura-en-ciencia-de-datos" target="_blank" rel="noopener noreferrer"><h4 class="timeline-title" data-i18n="about.edu1Title">Bachelor of Data Science</h4></a>
+                                                    <h4 class="timeline-title" data-i18n="about.edu1Title">Bachelor of Data Science</h4>
                                                     <p class="timeline-text" data-i18n="about.edu1Text">Undergraduate degree at Universidad Siglo 21 — distance modality — 18 subjects approved in 1.5 years.</p>
+                                                    <a class="timeline-site" href="https://21.edu.ar/oferta-academica/licenciatura-en-ciencia-de-datos" target="_blank" rel="noopener noreferrer">
+                                                        <span data-i18n="about.viewSite">View site</span>
+                                                        <i class="fa fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2022 - 2024
+                                                    </h3>
+                                                    <h4 class="timeline-title" data-i18n="about.edu5Title">React and TypeScript — The Complete Guide +10 Projects</h4>
+                                                    <p class="timeline-text" data-i18n="about.edu5Text">Hooks, State, TypeScript, Zod, Zustand, React Query, Next.js, React Router, MERN and PERN full-stack projects.</p>
+                                                    <a class="timeline-site" href="https://www.udemy.com/course/react-de-principiante-a-experto-creando-mas-de-10-aplicaciones/" target="_blank" rel="noopener noreferrer">
+                                                        <span data-i18n="about.viewSite">View site</span>
+                                                        <i class="fa fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2022 - 2024
+                                                    </h3>
+                                                    <h4 class="timeline-title" data-i18n="about.edu6Title">Node.js Bootcamp — MVC and REST APIs</h4>
+                                                    <p class="timeline-text" data-i18n="about.edu6Text">MVC, REST APIs, ORMs, email, authentication, file uploads, EJS, Pug, React, Leaflet maps and more.</p>
+                                                    <a class="timeline-site" href="https://www.udemy.com/course/nodejs-bootcamp-desarrollo-web-mvc-y-rest-apis/" target="_blank" rel="noopener noreferrer">
+                                                        <span data-i18n="about.viewSite">View site</span>
+                                                        <i class="fa fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2021 - 2022
+                                                    </h3>
+                                                    <h4 class="timeline-title" data-i18n="about.edu3Title">Modern JavaScript — Definitive Guide +20 Projects</h4>
+                                                    <p class="timeline-text" data-i18n="about.edu3Text">REST APIs with JSON and Fetch, Async/Await, ES6+, OOP with Classes and Prototypes, Promises, Callbacks and a MERN Full Stack project.</p>
+                                                    <a class="timeline-site" href="https://www.udemy.com/course/javascript-moderno-guia-definitiva-construye-10-proyectos/" target="_blank" rel="noopener noreferrer">
+                                                        <span data-i18n="about.viewSite">View site</span>
+                                                        <i class="fa fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2021 - 2022
+                                                    </h3>
+                                                    <h4 class="timeline-title" data-i18n="about.edu4Title">Complete Web Development with HTML5, CSS3, JS, PHP and MySQL</h4>
+                                                    <p class="timeline-text" data-i18n="about.edu4Text">BEM and module methodologies, modern JavaScript (ES6), PHP with Fetch API, dynamic sites and secure CRUD apps with PHP and MySQL.</p>
+                                                    <a class="timeline-site" href="https://www.udemy.com/course/desarrollo-web-completo-con-html5-css3-js-php-y-mysql/" target="_blank" rel="noopener noreferrer">
+                                                        <span data-i18n="about.viewSite">View site</span>
+                                                        <i class="fa fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                                    </a>
                                                 </div>
                                                 <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
                                                         <i class="fa fa-calendar"></i> 2020 - 2021
                                                     </h3>
-                                                    <a href="https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/" target="_blank" rel="noopener noreferrer"><h4 class="timeline-title" data-i18n="about.edu2Title">CSS The Complete Guide — Flexbox, CSS Grid, SASS +20 projects</h4></a>
+                                                    <h4 class="timeline-title" data-i18n="about.edu2Title">CSS The Complete Guide — Flexbox, CSS Grid, SASS +20 projects</h4>
                                                     <p class="timeline-text" data-i18n="about.edu2Text">Flexbox, CSS Grid, Custom Properties, SASS, Mixins, Gulp workflows, animations, RWD, transitions and transformations.</p>
-                                                </div>
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> 2021 - 2022
-                                                    </h3>
-                                                    <a href="https://www.udemy.com/course/javascript-moderno-guia-definitiva-construye-10-proyectos/" target="_blank" rel="noopener noreferrer"><h4 class="timeline-title" data-i18n="about.edu3Title">Modern JavaScript — Definitive Guide +20 Projects</h4></a>
-                                                    <p class="timeline-text" data-i18n="about.edu3Text">REST APIs with JSON and Fetch, Async/Await, ES6+, OOP with Classes and Prototypes, Promises, Callbacks and a MERN Full Stack project.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="experience padd-15">
-                                    <h3 class="title" data-i18n="about.courses">Courses</h3>
-                                    <div class="row">
-                                        <div class="timeline-box padd-15">
-                                            <div class="timeline shadow-dark">
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> 2021 - 2022
-                                                    </h3>
-                                                    <a href="https://www.udemy.com/course/desarrollo-web-completo-con-html5-css3-js-php-y-mysql/" target="_blank" rel="noopener noreferrer"><h4 class="timeline-title" data-i18n="about.edu4Title">Complete Web Development with HTML5, CSS3, JS, PHP and MySQL</h4></a>
-                                                    <p class="timeline-text" data-i18n="about.edu4Text">BEM and module methodologies, modern JavaScript (ES6), PHP with Fetch API, dynamic sites and secure CRUD apps with PHP and MySQL.</p>
-                                                </div>
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> 2022 - 2024
-                                                    </h3>
-                                                    <a href="https://www.udemy.com/course/react-de-principiante-a-experto-creando-mas-de-10-aplicaciones/" target="_blank" rel="noopener noreferrer"><h4 class="timeline-title" data-i18n="about.edu5Title">React and TypeScript — The Complete Guide +10 Projects</h4></a>
-                                                    <p class="timeline-text" data-i18n="about.edu5Text">Hooks, State, TypeScript, Zod, Zustand, React Query, Next.js, React Router, MERN and PERN full-stack projects.</p>
-                                                </div>
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> 2022 - 2024
-                                                    </h3>
-                                                    <a href="https://www.udemy.com/course/nodejs-bootcamp-desarrollo-web-mvc-y-rest-apis/" target="_blank" rel="noopener noreferrer"><h4 class="timeline-title" data-i18n="about.edu6Title">Node.js Bootcamp — MVC and REST APIs</h4></a>
-                                                    <p class="timeline-text" data-i18n="about.edu6Text">MVC, REST APIs, ORMs, email, authentication, file uploads, EJS, Pug, React, Leaflet maps and more.</p>
+                                                    <a class="timeline-site" href="https://www.udemy.com/course/css-grid-y-flexbox-la-guia-definitiva-crea-10-proyectos/" target="_blank" rel="noopener noreferrer">
+                                                        <span data-i18n="about.viewSite">View site</span>
+                                                        <i class="fa fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -640,7 +508,6 @@
                     <nav class="footer-nav" aria-label="Footer">
                         <a href="#home" data-i18n="nav.home">Home</a>
                         <a href="#experience" data-i18n="nav.experience">Experience</a>
-                        <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
                         <a href="#looking" data-i18n="nav.looking">Looking for</a>
                         <a href="#about" data-i18n="nav.about">About</a>
                         <a href="#contact" data-i18n="nav.contact">Contact</a>
@@ -655,24 +522,6 @@
                     </p>
                 </div>
             </footer>
-        </div>
-    </div>
-
-    <!-- Theme controls -->
-    <div class="style-switcher" aria-label="Theme settings">
-        <button type="button" class="style-switcher-toggler s-icon" aria-label="Theme colors">
-            <i class="fas fa-palette" aria-hidden="true"></i>
-        </button>
-        <button type="button" class="day-night s-icon" aria-label="Toggle dark mode">
-            <i class="fas" aria-hidden="true"></i>
-        </button>
-        <h4 data-i18n="theme.colors">Theme Colors</h4>
-        <div class="colors">
-            <button type="button" class="color-1" onclick="setActiveStyle('color-1')" aria-label="Color 1"></button>
-            <button type="button" class="color-2" onclick="setActiveStyle('color-2')" aria-label="Color 2"></button>
-            <button type="button" class="color-3" onclick="setActiveStyle('color-3')" aria-label="Color 3"></button>
-            <button type="button" class="color-4" onclick="setActiveStyle('color-4')" aria-label="Color 4"></button>
-            <button type="button" class="color-5" onclick="setActiveStyle('color-5')" aria-label="Color 5"></button>
         </div>
     </div>
 

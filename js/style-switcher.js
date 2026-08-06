@@ -1,22 +1,8 @@
-/* Theme panel */
-const styleSwitcher = document.querySelector(".style-switcher");
-const styleSwitcherToggle = document.querySelector(".style-switcher-toggler");
+/* Theme controls (inside aside menu) */
 const dayNight = document.querySelector(".day-night");
 const alternateStyles = document.querySelectorAll(".alternate-style");
 const THEME_KEY = "portfolio-theme";
 const COLOR_KEY = "portfolio-color";
-
-if (styleSwitcherToggle && styleSwitcher) {
-  styleSwitcherToggle.addEventListener("click", () => {
-    styleSwitcher.classList.toggle("open");
-  });
-}
-
-window.addEventListener("scroll", () => {
-  if (styleSwitcher && styleSwitcher.classList.contains("open")) {
-    styleSwitcher.classList.remove("open");
-  }
-});
 
 const setActiveStyle = (color) => {
   alternateStyles.forEach((style) => {
