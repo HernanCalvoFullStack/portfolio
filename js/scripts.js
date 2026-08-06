@@ -44,7 +44,8 @@ const translations = {
       intro: "Professional work and personal products I've built and shipped.",
       visitSite: "Visit site",
       requestDemo: "Request a demo",
-      demoOnRequest: "Private production system — live demo available on request.",
+      demoOnRequest:
+        "Private production system — live demo available on request.",
       demoLabel: "Demo video",
       demoHint: "To show the demo, add this file:",
       interassist: {
@@ -100,7 +101,8 @@ const translations = {
       edu1Title: "Bachelor of Data Science",
       edu1Text:
         "Undergraduate degree at Universidad Siglo 21 — distance modality — 18 subjects approved in 1.5 years.",
-      edu2Title: "CSS The Complete Guide — Flexbox, CSS Grid, SASS +20 projects",
+      edu2Title:
+        "CSS The Complete Guide — Flexbox, CSS Grid, SASS +20 projects",
       edu2Text:
         "Flexbox, CSS Grid, Custom Properties, SASS, Mixins, Gulp workflows, animations, RWD, transitions and transformations.",
       edu3Title: "Modern JavaScript — Definitive Guide +20 Projects",
@@ -175,10 +177,12 @@ const translations = {
     },
     experience: {
       title: "Experiencia",
-      intro: "Trabajo profesional y productos personales que construí y puse en producción.",
+      intro:
+        "Trabajo profesional y productos personales que construí y puse en producción.",
       visitSite: "Visitar sitio",
       requestDemo: "Pedir una demo",
-      demoOnRequest: "Sistema privado en producción — demo en vivo disponible a pedido.",
+      demoOnRequest:
+        "Sistema privado en producción — demo en vivo disponible a pedido.",
       demoLabel: "Video demo",
       demoHint: "Para mostrar el demo, agregá este archivo:",
       interassist: {
@@ -296,7 +300,9 @@ function setAge() {
 }
 
 function getByPath(obj, path) {
-  return path.split(".").reduce((acc, key) => (acc ? acc[key] : undefined), obj);
+  return path
+    .split(".")
+    .reduce((acc, key) => (acc ? acc[key] : undefined), obj);
 }
 
 const CV_FILES = {
@@ -338,7 +344,7 @@ function applyTranslations(lang) {
     langBtn.textContent = lang === "en" ? "ES" : "EN";
     langBtn.setAttribute(
       "aria-label",
-      lang === "en" ? "Cambiar a español" : "Switch to English"
+      lang === "en" ? "Cambiar a español" : "Switch to English",
     );
   }
 
@@ -362,7 +368,7 @@ function initTyped(lang) {
     typeSpeed: 90,
     backSpeed: 50,
     backDelay: 1400,
-  loop: true,
+    loop: true,
   });
 }
 
@@ -392,7 +398,7 @@ function initSkillsAnimation() {
         obs.unobserve(card);
       });
     },
-    { threshold: 0.2, rootMargin: "0px 0px -40px 0px" }
+    { threshold: 0.2, rootMargin: "0px 0px -40px 0px" },
   );
 
   cards.forEach((card) => observer.observe(card));

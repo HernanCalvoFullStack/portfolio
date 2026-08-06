@@ -277,17 +277,17 @@ button:focus-visible,
     border-right: 1px solid var(--bg-black-50);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: stretch;
     z-index: 30;
     transition: left 0.3s ease;
+    overflow: hidden;
 }
 
 .aside .logo {
-    position: absolute;
-    top: 5rem;
-    left: 3rem;
-    right: 3rem;
+    position: static;
+    flex-shrink: 0;
+    margin-bottom: 3rem;
     font-size: var(--fs-hero);
     text-transform: capitalize;
 }
@@ -355,12 +355,22 @@ button:focus-visible,
 }
 
 .aside .nav {
-    margin-top: 8rem;
+    margin-top: 0;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .aside .nav li {
     margin-bottom: 2rem;
     display: block;
+}
+
+.aside .nav li:last-child {
+    margin-bottom: 0;
 }
 
 .aside .nav li a {
@@ -385,10 +395,10 @@ button:focus-visible,
 }
 
 .aside-actions {
-    position: absolute;
-    bottom: 3rem;
-    left: 3rem;
-    right: 3rem;
+    position: static;
+    flex-shrink: 0;
+    margin-top: auto;
+    padding-top: 2.4rem;
 }
 
 .lang-btn {
@@ -1551,9 +1561,9 @@ h3.my-profession {
         width: 100%;
         left: -100%;
         border-right: none;
-        padding: 8rem 3rem 3rem;
+        padding: 5.6rem 2.4rem 2rem;
         justify-content: flex-start;
-        overflow-y: auto;
+        overflow: hidden;
     }
 
     .aside.open {
@@ -1561,14 +1571,15 @@ h3.my-profession {
     }
 
     .aside .logo {
-        position: static;
-        margin-bottom: 3rem;
-        text-align: center;
+        display: none;
     }
 
     .aside .nav {
         margin-top: 0;
-        flex: 1;
+        flex: 1 1 auto;
+        min-height: 0;
+        justify-content: flex-start;
+        overflow: hidden;
     }
 
     .aside .nav li {
@@ -1576,13 +1587,23 @@ h3.my-profession {
     }
 
     .aside .nav li a {
-        padding: 1.6rem 1.5rem;
-        font-size: 1.8rem;
+        padding: 1rem 1.2rem;
+        font-size: 1.5rem;
+    }
+
+    .aside .nav li a i {
+        margin-right: 1rem;
+        font-size: 1.4rem;
     }
 
     .aside-actions {
-        position: static;
-        margin-top: 3rem;
+        margin-top: auto;
+        padding-top: 1.2rem;
+    }
+
+    .lang-btn {
+        height: 3.6rem;
+        font-size: 1.3rem;
     }
 
     .nav-toggler {
